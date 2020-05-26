@@ -1,0 +1,105 @@
+$color-menu-footer: rgba(101, 161, 201, 1);
+
+body {
+    background-color: rgb(230, 230, 230);
+    font-family: Verdana, Tahoma, sans-serif;
+    margin-top: 60px;
+}
+body > div {
+    line-height: 180%;      /*altura entre linhas*/
+}
+
+p {
+    text-indent: 3em;
+    text-align: justify;
+}
+p::selection {
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+}
+
+.img {
+    padding-top: 30px;;
+    padding-bottom: 30px;
+}
+
+/* ===== CABEÇALHO ===== */
+
+#menu {
+    background-color: $color-menu-footer;
+}
+
+#menu-item a:hover:not(.active) {
+    /* color: red; */
+    background-color: rgba(61, 61, 61, 0.75);
+}
+
+/* ===== LADO DIREITO ===== */
+
+#side-right {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+}
+/* ===== LADO ESQUERDO ===== */
+
+#side-left {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+/* ===== RODAPÉ ===== */
+
+#footer {
+    background-color: $color-menu-footer;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ===== REDES SOCIAIS ===== */
+
+.fa {
+    padding: 11px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+// Effect when hover over icons
+.fa:hover {
+    opacity: 0.85;
+    text-decoration: none;
+    color: unset;
+}
+// Using inheritance concept
+%social-media-color {
+    color: white;
+}
+
+.fa-linkedin {
+    @extend %social-media-color;
+    background: #0e76a8;
+}
+
+.fa-github {
+    @extend %social-media-color;
+    background: black;
+}
+
+@media (max-width: 575px) {
+    #menu, #footer {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    footer  {
+        color: white;
+    }
+}
