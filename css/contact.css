@@ -1,0 +1,17 @@
+table tr {
+  background-color: rgba(211, 211, 211, 0.15);
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+textarea:focus, input[type=text]:focus {
+  outline: 1px solid rgba(85, 85, 85, 0.3);
+}
+
+.center-me {
+  margin: 0 auto;
+}
+/*# sourceMappingURL=contact.css.map */
